@@ -1,0 +1,19 @@
+First of all, this project is not complete, but in the spirit of release
+early, release often, I have chosen to share my progress and thoughts thus far.
+
+Instead of basing my work on the pretty well advanced submission on 
+another branch of this repo.  That wouldn't be right.
+
+I have a brief python app, dockerized, and running under the flask framework
+that, once the container is spun up, can be reached at:
+
+http://localhost/input?DOB=082471&first=James&last=Lewis
+
+Beware, there is no sort of error checking or linting, but if you give the app the 
+right params, it will work.  There may be dragons, though...
+
+Linkerd is giving me some install issues, since I haven't worked with this piece of 
+tech before, it is taking some time to figure it out, so I can proceed with the 
+kubernetes and Terraform pieces.
+
+To be continued....

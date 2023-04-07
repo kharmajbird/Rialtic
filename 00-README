@@ -1,0 +1,15 @@
+kubectl create deployment nginx --image=nginx -o yaml --dry-run
+
+curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | sh
+
+linkerd check --pre
+linkerd install --crds | kubectl apply -f -
+linkerd install --set proxyInit.runAsRoot=true| kubectl apply -f -
+
+
+# linkerd cannot be installed on system due to the image pull failing
+
+##pip install requests
+
+docker build -t rialtic-app .
+docker run -p 80:80 rialtic-app

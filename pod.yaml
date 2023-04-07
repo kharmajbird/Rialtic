@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rea-pod
+  labels:
+    app: myapp
+    type: front-end-service
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.18
+  containers:
+    - name: linkerd-container
+      image: linkerd

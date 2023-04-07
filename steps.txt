@@ -28,4 +28,4 @@ Extra:
 - What are some possible issues with this design? Would you deploy this in production? Why, Why not?
 - How would you scale this to 10 requests/seccond? How about 100 requests/second?
 - How could we improve this scenario?
-# Rialtic
+
