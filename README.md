@@ -1,0 +1,31 @@
+## Exercise Steps
+
+1. Standup a local kubernetes cluster with docker desktop.
+    - install nginx and linkerd 
+    - store the manifest used in a /.k8s folder
+2.  build an api in golang, rust, or python that
+    - takes your birthdate your first name and your last name as arguments and returns the hash.
+    - can take the hash of the arguments and and return the initial arguments by comparing the hash
+    - Write unit test for these two functions.
+3. Write the dockerfile for the api to containerize it store this at .`/Dockerfile`
+4. Write the kubernetes manifest for the backend api which will take traffic via linkerd that starts on nginx and store these in `/.k8s`.
+5. Deploy this on your local kubernetes cluster and test that it work. Docker desktop is the easiest way to do this. 
+6. Choose either of the following and store the resulting terraform in "./infra"
+    1. Write a terraform module to release the manifest you wrote to kubernetes using the kubernetes, kubectl, or helm provider. 
+    2. Download localstack and create an IAM role for your service to assume on an eks cluster using terraform.
+7. Push the source code, Dockerfile, and manifest to the repo.
+8. Write the `/.gitlab-ci.yml` file to run the unit test against your code, create a semantic version release, build the container, and push it to the repo, tagged appropriately that we can use to deploy and test with.
+9. Push the `/.gitlab-ci.yml` to the repo and validate that your test work as expected. 
+10. Open a PR with your changes and/or email us back letting us know you are ready for us to review.
+
+Notes:
+ 
+ How you organize this repository within the guidelines provided is up to you. No one minds if you use helm charts or copy solutions off the internet. No one is wondering if you used chatGPT to generate the code. What we want to know is can you make it all work and prove that it works to yourself before submitting. If you can't make it work, why not? No one knows everything, but we must all know our limits. 
+ 
+Extra:
+- How did you handle logging? Why?
+- Do the unit tests pass? Why, Why not?
+- What are some possible issues with this design? Would you deploy this in production? Why, Why not?
+- How would you scale this to 10 requests/seccond? How about 100 requests/second?
+- How could we improve this scenario?
+# Rialtic
